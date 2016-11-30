@@ -1,12 +1,73 @@
-@import 'utility'
-
-$base-text-size: 16px
-$base-font-family: sans-serif
+$octoGray: hsl(0, 0%, 95%)
+$
 
 html
   text-size-adjust: 100%
 
 body
-  @include font-smoothing(on)
   margin: 0
-  font: $base-text-size / 1 $base-font-family
+  font-family: Helvetica, sans-serif
+  background-color: $octoGray
+
+nav
+  display: flex
+  justify-content: space-between
+  align-items: center
+  font-family: Helvetica
+  font-weight: bold
+  padding: 0 0.5em
+  background-color: darken($octoGray, 30%)
+
+  ul
+    display: flex
+    list-style-type: none
+    font-size: 13px
+
+  a
+    padding: 0 15px
+    text-decoration: none
+    color: #333//
+
+main
+
+  h1
+    margin: 10px
+    font-family: Helvetica
+    text-align: center
+
+  p
+    margin: 10px
+    font-size: 16px
+    font-family: Helvetica
+    text-align: center
+
+  ul
+    display: flex
+    flex-wrap: wrap
+    padding: 10px
+    justify-content: center
+
+    li
+      list-style: none
+      margin: 10px
+
+    img
+      border-radius: 0.25em
+      border-width: 10px
+      border: solid
+      border-color: #cacaca
+
+
+figcaption
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+figcaption p.faded
+  font-family: Helvetica
+  opacity: 0.5
+
+footer
+
+  ul
+    text-decoration: none
