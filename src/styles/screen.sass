@@ -1,45 +1,40 @@
-$octoGray: hsl(0, 0%, 95%)
-$
+$font-stack: Helvetica, sans-serif
+$octoGray: hsla(0, 0%, 95%, 1)
 
 html
   text-size-adjust: 100%
 
 body
+  font-family: $font-stack
   margin: 0
-  font-family: Helvetica, sans-serif
+  margin-right: 0
+  padding: 0
   background-color: $octoGray
 
-nav
-  display: flex
-  justify-content: space-between
-  align-items: center
-  font-family: Helvetica
-  font-weight: bold
-  padding: 0 0.5em
-  background-color: darken($octoGray, 30%)
-
-  ul
+  nav
     display: flex
-    list-style-type: none
-    font-size: 13px
+    justify-content: space-between
+    align-items: center
+    font-weight: bold
+    padding: 0 0.5em
+    background-color: darken($octoGray, 30%)
 
-  a
-    padding: 0 15px
-    text-decoration: none
-    color: #333//
+    ul
+      display: flex
+      list-style-type: none
+      font-size: 15px
 
-main
+    a
+      padding: 0 15px
+      text-decoration: none
+      color: hsla(0, 0%, 20%, 1)
 
-  h1
-    margin: 10px
-    font-family: Helvetica
+  header
+    padding: 20px
     text-align: center
 
-  p
-    margin: 10px
-    font-size: 16px
-    font-family: Helvetica
-    text-align: center
+    p
+      font-size: 1.25em
 
   ul
     display: flex
@@ -51,23 +46,26 @@ main
       list-style: none
       margin: 10px
 
-    img
+    .catPics
       border-radius: 0.25em
-      border-width: 10px
       border: solid
-      border-color: #cacaca
+      border-width: 1px
+      border-color: darken($octoGray, 50%)
+      background-color: white
 
+  figcaption
+    display: flex
+    justify-content: space-between
+    align-items: center
 
-figcaption
-  display: flex
-  justify-content: space-between
-  align-items: center
+  figcaption p.faded
+    font-family: Helvetica
+    opacity: 0.5
 
-figcaption p.faded
-  font-family: Helvetica
-  opacity: 0.5
+  footer
+    @extend nav
+    display: inline-flex
+    width: 100vw
 
-footer
-
-  ul
-    text-decoration: none
+    .copyright
+      font-weight: 100
